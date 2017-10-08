@@ -1,25 +1,28 @@
 extends layout
 
 block content
-  form(action="post")
-  div.flex.align-center.mb2
-    label(for="refID") Reference ID: 
-    input.flex-auto(type="text" placeholder="enter URL or name" name="refID")
-  
-  .flex.align-center.mb2
-    label(for="tag1") Tag:
-    .flex
-      #tag-container
-        input.block(type="text" placeholder="add tag" name="tag1" id="tag1")
-      button#add-tag.btn.btn-primary.align-self-end(type="button") Add tag
-  
-  div.flex.align-center.mb2
-    label(for="comments") Comments thread:
-    input.flex-auto(type="text" placeholder="ID of where discussion around this reference is happening" name="comments")
-  
-  div.flex.align-center.mb2
-    label(for="context") Context: 
-    input.flex-auto(type="text" placeholder="Source of reference" name="context")
+  form(action="/addRef" method="POST")
+
+    div.flex.align-center.mb2
+      label(for="refID") Reference ID: 
+      input.flex-auto(type="text" placeholder="enter URL or name" name="refID")
+    
+    .flex.align-center.mb2
+      label(for="tag1") Tag:
+      .flex
+        #tag-container
+          input.block(type="text" placeholder="add tag" name="tag1" id="tag1")
+        button#add-tag.btn.btn-outline.align-self-end(type="button") Add tag
+    
+    div.flex.align-center.mb2
+      label(for="comments") Comments thread:
+      input.flex-auto(type="text" placeholder="ID of where discussion around this reference is happening" name="comments")
+    
+    div.flex.align-center.mb2
+      label(for="context") Context: 
+      input.flex-auto(type="text" placeholder="Source of reference" name="context")
+    
+    button#submit-button.btn.btn-primary(type="submit") Submit
   
   script.
     const addTagBtn = document.getElementById('add-tag');
