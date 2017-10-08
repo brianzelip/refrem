@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description":
     "References to remember, including its ID, its value, and its context.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "nyc ava --verbose"
   },
