@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  form(action="post")
+  div.flex.align-center.mb2
+    label(for="refID") Reference ID: 
+    input.flex-auto(type="text" placeholder="enter URL or name" name="refID")
+  
+  .flex.align-center.mb2
+    label(for="tag1") Tag:
+    .flex
+      #tag-container
+        input.block(type="text" placeholder="add tag" name="tag1" id="tag1")
+      button#add-tag.btn.btn-primary.align-self-end(type="button") Add tag
+  
+  div.flex.align-center.mb2
+    label(for="comments") Comments thread:
+    input.flex-auto(type="text" placeholder="ID of where discussion around this reference is happening" name="comments")
+  
+  div.flex.align-center.mb2
+    label(for="context") Context: 
+    input.flex-auto(type="text" placeholder="Source of reference" name="context")
+  
+  script.
+    const addTagBtn = document.getElementById('add-tag');
+    const tags = document.getElementById('tag-container');
+
+    addTagBtn.addEventListener('click', (e) => {
+      const tagCount = tags.children.length;
+      const input = document.createElement('input');
+      console.log('tags.children before createElement', tags.children)
+      tags.appendChild(input);
+      console.log('tags.children after createElement', tags.children)
+      tags.lastChild.setAttribute("type", "text");
+      tags.lastChild.setAttribute("placeholder", "add tag");
+      tags.lastChild.setAttribute("name", `tag${tagCount + 1}`);
+      tags.lastChild.setAttribute("id", `tag${tagCount + 1}`);
+      tags.lastChild.classList.add("block");
+    });
