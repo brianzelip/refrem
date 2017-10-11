@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://npmcdn.com/basscss@7.1.1/css/basscss.min.css">
+  <title>Document</title>
+  <style>
+    html,
+    body,
+    .vh100 {
+      min-height: 100vh;
+    }
+
+    .bg-light-gray {
+      background-color: #efefef;
+    }
+
+    .shadow {
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .h0 {
+      font-size: 2.7rem;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .align-self-start {
+      align-self: flex-start;
+    }
+
+    .px1 {
+      padding-right: .5rem;
+      padding-left: .5rem;
+    }
+
+    .py1 {
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+    }
+
+    .px2 {
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+
+    .py2 {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    input[type="date"],
+    input[type="datetime-local"],
+    input[type="datetime"],
+    input[type="email"],
+    input[type="month"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="text"],
+    input[type="time"],
+    input[type="url"],
+    input[type="week"] {
+      height: auto;
+    }
+  </style>
+</head>
+
+<body class="bg-light-gray flex flex-center justify-center flex-column">
+
+  <div class="sm-col-7">
+    <h1 class="h0 mt0">Add ref</h1>
+    <form action="/add" method="POST" class="bg-white shadow p4">
+      <label for="url">URL</label>
+      <input type="text" name="url" class="col-12 mb2">
+      <label for="comments">Comments URL</label>
+      <input type="text" name="comments" class="col-12 mb2">
+      <ul class="list-reset flex">
+        <li class="bg-light-gray px2 py1 mr2">
+          <input type="radio" id="HN" value="HN" name="tags">
+          <label for="HN">HN</label>
+        </li>
+        <li class="bg-light-gray px2 py1 mr2">
+          <input type="radio" id="twitter" value="twitter" name="tags">
+          <label for="twitter">Twitter</label>
+        </li>
+        <li class="bg-light-gray">
+          <input type="text" name="tag-other">
+        </li>
+      </ul>
+      <label for="tag">Tag</label>
+      <input type="text" name="tag" class="col-12">
+    </form>
+  </div>
+
+</body>
+
+</html>
