@@ -4,6 +4,6 @@ const refController = require('../controllers/refController');
 
 // Do work here
 router.get('/', refController.homePage);
-router.post('/add', refController.homePage);
+router.post('/add', refController.addReference);
 
 module.exports = router;
