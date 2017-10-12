@@ -3,5 +3,6 @@ extends layout
 include mixins/_addForm
 
 block content
-    h1.h0.mt0= title
+    h1.h0.mt0
+        a.btn.px0(href="/")= title
     +addForm()

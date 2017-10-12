@@ -69,6 +69,10 @@ body,
   align-self: flex-start;
 }
 
+.px0 {
+  padding-right: 0;
+  padding-left: 0;
+}
 .px1 {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
