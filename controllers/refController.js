@@ -1,7 +1,3 @@
-exports.homePage = (req, res) => {
-  res.render('addRef');
-};
-
-exports.refSubmission = (req, res) => {
-  res.render('submitSuccess', req.body);
+exports.addRef = (req, res) => {
+  res.render('addRef', { title: 'Add Reference' });
 };
