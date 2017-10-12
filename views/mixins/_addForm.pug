@@ -7,7 +7,7 @@ mixin addForm(ref = {})
     input(type="text" name="commentsUrl" class="col-12 mb2")
     label(for="source") Source of the reference
     .flex.mb2
-      - const sources = ['HN', 'Twitter'];
+      - const sources = ['HN', 'Twitter', 'GitHub'];
         ul.list-reset.flex.flex-wrap.mb0
           each source in sources
             li.flex.flex-center.mr2.source-option
