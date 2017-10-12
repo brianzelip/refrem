@@ -5,7 +5,12 @@
     "References to remember, including its ID, its value, and its context.",
   "main": "app.js",
   "scripts": {
-    "test": "nyc ava --verbose"
+    "test": "nyc ava --verbose",
+    "watch": "nodemon ./app.js --ignore public/",
+    "css":
+      "postcss -u postcss-import autoprefixer cssnano -d public/dist/ public/src/refrem.css --no-map --watch",
+    "start":
+      "concurrently \"npm run watch\" \"npm run css\" --names \"😈,📦\" --prefix name"
   },
   "author": "Brian Zelip",
   "license": "MIT",
@@ -15,7 +20,16 @@
     "pug": "^2.0.0-rc.4"
   },
   "devDependencies": {
+    "autoprefixer": "^7.1.5",
     "ava": "^0.22.0",
-    "nyc": "^11.2.1"
+    "concurrently": "^3.5.0",
+    "cssnano": "^3.10.0",
+    "nodemon": "^1.12.1",
+    "nyc": "^11.2.1",
+    "postcss": "^6.0.13",
+    "postcss-cli": "^4.1.1",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-custom-properties": "^6.2.0",
+    "postcss-import": "^11.0.0"
   }
 }

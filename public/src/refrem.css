@@ -1,0 +1,119 @@
+/*! 
+  refrem.css
+
+    "Does Wayne Brady have to remember a reference?!"
+
+  by @bzelip
+*/
+
+@import './basscss@7.1.1.css';
+
+/*! refrem custom styles on top of Basscss */
+
+/*
+Box Sizing via http://tachyons.io/docs/layout/box-sizing/
+*/
+html,
+body,
+div,
+article,
+section,
+main,
+footer,
+header,
+form,
+fieldset,
+pre,
+code,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+textarea,
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+.border-box {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.vh100 {
+  min-height: 100vh;
+}
+
+.bg-light-gray {
+  background-color: #efefef;
+}
+
+.shadow {
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+}
+
+.h0 {
+  font-size: 2.7rem;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-self-start {
+  align-self: flex-start;
+}
+
+.px1 {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.py1 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px2 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.py2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+input[type='date'],
+input[type='datetime-local'],
+input[type='datetime'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
+input[type='week'] {
+  height: auto;
+}
+
+.source-option input {
+  display: none;
+}
+
+.source-option input + label {
+  background: #e6e6e6;
+  padding: 1rem;
+}
+
+.source-option input:checked + label {
+  background: #bada55;
+}

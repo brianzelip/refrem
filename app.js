@@ -6,7 +6,7 @@ const routes = require('./routes/index');
 
 // create our Express app
 const app = express();
-app.set('port', process.env.PORT || 2600);
+app.set('port', process.env.PORT || 7777);
 const server = app.listen(app.get('port'), () => {
   console.log(`Express running → PORT ${server.address().port}`);
 });
@@ -15,7 +15,7 @@ app.set('views', path.join(__dirname, 'views')); // this is the folder where we 
 app.set('view engine', 'pug'); // we use the engine pug, mustache or EJS work great too
 
 // serves up static files from the dist folder. Anything in dist/ will just be served up as the file it is
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Takes the raw requests and turns them into usable properties on req.body
 app.use(bodyParser.json());
