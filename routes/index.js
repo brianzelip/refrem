@@ -3,6 +3,6 @@ const router = express.Router();
 const refController = require('../controllers/refController');
 
 // Do work here
-router.get('/', refController.addRef);
+router.get('/', refController.add);
 
 module.exports = router;

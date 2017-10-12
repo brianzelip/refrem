@@ -111,7 +111,7 @@ input[type='week'] {
 
 .source-option input + label {
   background: #e6e6e6;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .source-option input:checked + label {

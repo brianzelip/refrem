@@ -1,3 +1,3 @@
-exports.addRef = (req, res) => {
-  res.render('addRef', { title: 'Add Reference' });
+exports.add = (req, res) => {
+  res.render('add', { title: 'Add a Reference to Remember' });
 };
