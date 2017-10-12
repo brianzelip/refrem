@@ -1,22 +1,21 @@
 {
   "name": "refrem",
   "version": "0.1.0",
-  "description":
-    "References to remember, including its ID, its value, and its context.",
+  "description": "References to remember, including its ID, its value, and its context.",
   "main": "app.js",
   "scripts": {
     "test": "nyc ava --verbose",
     "watch": "nodemon ./app.js --ignore public/",
-    "css":
-      "postcss -u postcss-import autoprefixer cssnano -d public/dist/ public/src/refrem.css --no-map --watch",
-    "start":
-      "concurrently \"npm run watch\" \"npm run css\" --names \"😈,📦\" --prefix name"
+    "css": "postcss -u postcss-import autoprefixer cssnano -d public/dist/ public/src/refrem.css --no-map --watch",
+    "start": "concurrently \"npm run watch\" \"npm run css\" --names \"😈,📦\" --prefix name"
   },
   "author": "Brian Zelip",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
     "express": "^4.16.1",
+    "mongoose": "^4.12.1",
     "pug": "^2.0.0-rc.4"
   },
   "devDependencies": {
