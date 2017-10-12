@@ -1,6 +1,6 @@
 mixin addForm(ref = {})
 
-  form.bg-white.shadow.p4(action="/add" method="GET")
+  form.bg-white.shadow.p4(action="/add" method="POST")
     label(for="refUrl") URL for the reference
     input(type="text" name="refUrl" class="col-12 mb2")
     label(for="commentsUrl") URL for comments about the reference
@@ -14,6 +14,6 @@ mixin addForm(ref = {})
               input(type="radio" id=source value=source name="source")
               label(for=source)= source
         input(type="text" name="soure-other")
-    label(for="tag") Category of the reference
+    label(for="category") Category of the reference
     input(type="text" name="category" class="col-12 mb2")
     input(type="submit" value="Add reference " class="btn btn-primary col-12" )
