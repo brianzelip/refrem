@@ -11,9 +11,10 @@ mixin addForm(ref = {})
         ul.list-reset.flex.flex-wrap.mb0
           each source in sources
             li.flex.flex-center.mr2.source-option
-              input(type="radio" id=source value=source name="source")
+              input(type="radio" id=source value=source name="sourceRadio")
               label(for=source)= source
-        input(type="text" name="soure-other")
+        input(type="text" name="soureText" placeholder="some other source")
+        label.py1.hide(for="soureText") Other source
     label(for="category") Category of the reference
     input(type="text" name="category" class="col-12 mb2")
     input(type="submit" value="Add reference " class="btn btn-primary col-12 mt1")
