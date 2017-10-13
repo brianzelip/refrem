@@ -5,6 +5,6 @@ const { catchErrors } = require('../handlers/errorHandlers');
 
 // Do work here
 router.get('/', refController.homePage);
-router.post('/add', refController.addReference);
+router.post('/add', catchErrors(refController.addReference));
 
 module.exports = router;
