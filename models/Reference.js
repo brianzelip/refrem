@@ -12,7 +12,8 @@ const referenceSchema = new mongoose.Schema(
       type: String,
       trim: true
     },
-    source: String,
+    sourceRadio: String,
+    sourceText: String,
     category: String
   },
   {
@@ -24,5 +25,6 @@ const referenceSchema = new mongoose.Schema(
 //   this.timeStamp = Date.now();
 //   next();
 // }); // needs to be a long-form function because we need `this`, so arrow func won't do
+// keeping this function around to show my future self how to insert a pre('save')
 
 module.exports = mongoose.model('Reference', referenceSchema);
