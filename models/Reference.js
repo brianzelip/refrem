@@ -25,4 +25,4 @@ const referenceSchema = new mongoose.Schema(
 //   next();
 // }); // needs to be a long-form function because we need `this`, so arrow func won't do
 
-module.exports = mongoose.model('Store', referenceSchema);
+module.exports = mongoose.model('Reference', referenceSchema);
