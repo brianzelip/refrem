@@ -14,5 +14,5 @@ exports.homePage = (req, res) => {
 exports.addReference = async (req, res) => {
   const reference = new Reference(req.body);
   await reference.save();
-  res.json(req.body);
+  res.redirect('/');
 };
