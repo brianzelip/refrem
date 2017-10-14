@@ -5,6 +5,9 @@ exports.homePage = (req, res) => {
   res.render('index');
 };
 
+exports.flashesPage = (req, res) => {
+  req.flash('success', 'Reference successfully saved!');
+  res.render('test-flashes');
 };
 
 exports.addReference = async (req, res) => {
