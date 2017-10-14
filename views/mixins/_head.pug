@@ -4,8 +4,8 @@ mixin head()
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-    link(rel="stylesheet", href=`${css}`)
-    title= title
-    meta(name="author" content=`${author}`)
-    meta(name="description" content=`${description}`)
-    meta(name="keywords" content=`${keywords.join(', ')}`)
+    link(rel="stylesheet", href=`${h.meta.css}`)
+    title= h.meta.title
+    meta(name="author" content=`${h.meta.author}`)
+    meta(name="description" content=`${h.meta.description}`)
+    meta(name="keywords" content=`${h.meta.keywords.join(', ')}`)
