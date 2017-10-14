@@ -121,3 +121,43 @@ input[type='week'] {
 .source-option input:checked + label {
   background: #bada55;
 }
+
+:root {
+  --color-green: #2ecc40;
+  --color-red: #ff4136;
+  --state-success: var(--color-green);
+  --state-error: var(--color-red);
+
+  --bg-color-success: color(var(--state-success) tint(75%));
+  --color-success: color(var(--state-success) lightness(25%));
+  --border-color-success: color(var(--bg-color-success) shade(25%));
+
+  --bg-color-error: color(var(--state-error) tint(75%));
+  --color-error: color(var(--state-error) lightness(25%));
+  --border-color-error: color(var(--bg-color-error) shade(25%));
+}
+
+.flash {
+  padding: 1rem;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+}
+
+/* Success */
+.flash--success {
+  background-color: var(--bg-color-success);
+  color: var(--color-success);
+  border-color: var(--border-color-success);
+}
+
+/* Error */
+.flash--error {
+  background-color: var(--bg-color-error);
+  color: var(--color-error);
+  border-color: var(--border-color-error);
+}
+
+.cursor {
+  cursor: default;
+}
