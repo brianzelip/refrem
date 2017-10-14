@@ -20,7 +20,14 @@ exports.staticMap = ([lng, lat]) =>
 exports.icon = name => fs.readFileSync(`./public/images/icons/${name}.svg`);
 
 // Some details about the site
-exports.siteName = `Now That's Delicious!`;
+exports.meta = {
+  title: 'RefRem',
+  tagLine: 'Add a Reference to Remember',
+  css: 'dist/refrem.css',
+  author: 'Brian Zelip',
+  description: 'to be or not to be',
+  keywords: ['isolate', 'rejoice', 'Moose Bug']
+};
 
 exports.menu = [
   { slug: '/stores', title: 'Stores', icon: 'store' },
