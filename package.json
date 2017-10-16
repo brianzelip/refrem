@@ -12,6 +12,10 @@
     "start":
       "concurrently \"npm run watch\" \"npm run css\" --names \"😈,📦\" --prefix name"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianzelip/refrem.git"
+  },
   "author": "Brian Zelip",
   "license": "MIT",
   "dependencies": {
