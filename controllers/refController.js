@@ -16,3 +16,9 @@ exports.addReference = async (req, res) => {
   req.flash('success', 'Reference saved successfully!');
   res.redirect('/');
 };
+
+exports.getReferences = async (req, res) => {
+  // 1 .query the database for a list of all references
+  const references = await Reference.find();
+  res.render('references', { title: 'References', references });
+};

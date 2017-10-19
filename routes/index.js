@@ -7,5 +7,6 @@ const { catchErrors } = require('../handlers/errorHandlers');
 router.get('/', refController.homePage);
 router.get('/flashes', refController.flashesPage);
 router.post('/add', catchErrors(refController.addReference));
+router.get('/refs', catchErrors(refController.getReferences));
 
 module.exports = router;

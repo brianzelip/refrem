@@ -1,0 +1,14 @@
+extends layout
+
+include mixins/_addForm
+
+block content
+  h1= title
+  h2 Total refs: #{Object.values(references).length}
+  ol
+    each reference in references
+      li
+        a(href=reference.refUrl)= reference.refUrl
+        //- TODO make href more robust so that it normalizes a url it's passed
+        //- ie: in case there's no `http(s)://`, b/c the link will be rendered
+        //- with local dev scope -- `http://localhost:8777/zelip.me`
