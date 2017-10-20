@@ -8,7 +8,7 @@ block content
   ol
     each reference in references
       li
-        a(href=reference.refUrl)= reference.refUrl
+        a(href=reference.refUrl)= reference.refUrlTitle || reference.refUrl
         //- TODO make href more robust so that it normalizes a url it's passed
         //- ie: in case there's no `http(s)://`, b/c the link will be rendered
         //- with local dev scope -- `http://localhost:8777/zelip.me`
