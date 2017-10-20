@@ -29,9 +29,13 @@ referenceSchema.pre('save', async function(next) {
     const response = await axios.get(url);
     const html = await cheerio.load(response.data);
     const title = await html('title').text();
-
-    return title;
+    if (title !== '') {
+      return title;
+    } else {
+      return url;
+    }
   }
+
   this.refUrlTitle = await getHtmlTitle(this.refUrl);
   next();
 });
