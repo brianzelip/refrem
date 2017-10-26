@@ -3,6 +3,7 @@ extends layout
 include mixins/_addForm
 
 block content
-  h1.h0.mt0
+  h1.h0.mt0.inline-block
     a.btn.px0(href="/")= h.meta.tagLine
+  a.btn(href="refs") refs
   +addForm()
