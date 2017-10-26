@@ -3,7 +3,9 @@ extends layout
 include mixins/_addForm
 
 block content
-  h1= title
+  h1.inline-block
+    a.btn.px0(href="refs")= title
+  a.btn(href="/") form
   h2 Total refs: #{Object.values(references).length}
   ol
     each reference in references
