@@ -16,7 +16,7 @@ exports.addReference = async (req, res) => {
   await reference.save();
   req.flash(
     'success',
-    `You're reference at <strong>${hostname}</strong> saved successfully!`
+    `Your reference at <strong>${hostname}</strong> saved successfully!`
   );
   res.redirect('/');
 };
