@@ -12,8 +12,12 @@ exports.flashesPage = (req, res) => {
 
 exports.addReference = async (req, res) => {
   const reference = new Reference(req.body);
+  const hostname = req.body.refUrl.split('/')[2];
   await reference.save();
-  req.flash('success', 'Reference saved successfully!');
+  req.flash(
+    'success',
+    `You're reference at <strong>${hostname}</strong> saved successfully!`
+  );
   res.redirect('/');
 };
 
