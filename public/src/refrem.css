@@ -64,6 +64,12 @@ body,
 .justify-center {
   justify-content: center;
 }
+.justify-around {
+  justify-content: space-around;
+}
+.justify-between {
+  justify-content: space-between;
+}
 
 .align-self-start {
   align-self: flex-start;
