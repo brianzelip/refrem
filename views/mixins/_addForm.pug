@@ -1,6 +1,7 @@
 mixin addForm(ref = {})
 
   form.bg-white.shadow.p4(action="/add" method="POST")
+    h3.mt0= h.meta.tagLine
     label(for="refUrl") URL for the reference
     input(type="text" name="refUrl" class="col-12 mb2")
     label(for="commentsUrl") URL for comments about the reference
