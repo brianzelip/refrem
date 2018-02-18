@@ -3,7 +3,10 @@ extends layout
 include mixins/_addForm
 
 block content
-  h1.h0.mt0.inline-block
-    a.btn.px0(href="/")= h.meta.tagLine
-  a.btn(href="refs") refs
+  header.flex.flex-center.justify-between
+    a.btn.px0(href="/")
+      h1.m0.flex.flex-center
+        span.h2.mr1 ※
+        span #{h.meta.title.toLowerCase()}
+    a.btn(href="refs") references
   +addForm()
