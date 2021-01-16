@@ -16,7 +16,7 @@
   "author": "Brian Zelip",
   "license": "MIT",
   "dependencies": {
-    "axios": "0.15.3",
+    "axios": "0.21.1",
     "body-parser": "^1.18.3",
     "bson": "^4.0.1",
     "cheerio": "^1.0.0-rc.2",
